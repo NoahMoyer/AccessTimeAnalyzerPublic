@@ -5,7 +5,7 @@ The idea of this application is to allow the user to analyze data about a set of
 on many different computers.
 
 ### Main screen
-![Screenshot_20230809_134845](https://github.com/NoahMoyer/AccessTimeAnalyzer/assets/35582108/f9a62a65-e1d3-449c-87d1-45d0f244ce60)
+![main](https://github.com/NoahMoyer/AccessTimeAnalyzerPublic/assets/35582108/b5e00fc1-8181-48d9-a57e-f007f2458fea)
 
 
 ## Main functionality
@@ -15,10 +15,12 @@ The main function of Access Time analyzer is to scan a windows PC to confirm bas
 You will need to know the programs you want to look at and where their exes are stored when installed.
 
 Here is an example of an app name and location: <br>
-![image](https://github.com/NoahMoyer/AccessTimeAnalyzer/assets/36149055/60cfcbbe-6b47-4263-8b83-cd49241023c4)
+![1](https://github.com/NoahMoyer/AccessTimeAnalyzerPublic/assets/35582108/776c3c8c-19fe-4c02-9906-dd2484e9dd92)
+
 
 The program currently requires a SQL server to store the information for application locations and the groups they correspond with. Here is an example of a working database table: <br>
-![Screenshot_20230809_135020](https://github.com/NoahMoyer/AccessTimeAnalyzer/assets/35582108/0c8c58fc-041f-4ae5-89d1-6ffcfef84fa9)
+![2](https://github.com/NoahMoyer/AccessTimeAnalyzerPublic/assets/35582108/2d99839c-f022-44c0-a0eb-d2e9edfeeda7)
+
 <br>
 ***Note: Currently without a SQL server the application will not function.***
 
@@ -28,7 +30,8 @@ a computer that is locally connected to your network you can change this by
 typing the name of the computer in the text box under machine name then clicking
 "Change machine name".
 ### Main screen
-![Screenshot_20230809_134845](https://github.com/NoahMoyer/AccessTimeAnalyzer/assets/35582108/f9a62a65-e1d3-449c-87d1-45d0f244ce60)
+![main](https://github.com/NoahMoyer/AccessTimeAnalyzerPublic/assets/35582108/7f46f891-a6eb-4e41-a3bb-325fde655daa)
+
 
 #### Last Accessed field
 This property is not very reliable in determining when an application was last launched. From
