@@ -19,7 +19,7 @@ namespace Access_Time_Analyzer
         {
             ///getting version on github
             System.Net.WebClient wc = new System.Net.WebClient();
-            string webData = wc.DownloadString("https://raw.githubusercontent.com/NoahMoyer/AccessTimeAnalyzer/main/Access%20Time%20Analyzer/Access%20Time%20Analyzer/Properties/AssemblyInfo.cs");
+            string webData = wc.DownloadString("https://raw.githubusercontent.com/NoahMoyer/AccessTimeAnalyzerPublic/main/Access%20Time%20Analyzer/Access%20Time%20Analyzer/Properties/AssemblyInfo.cs");
 
             //parse webData for the following line:
             //[assembly: AssemblyVersion("1.2.2")]

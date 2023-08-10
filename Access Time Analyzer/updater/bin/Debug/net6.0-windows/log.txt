@@ -1,0 +1,8 @@
+[8/10/2023 4:03:52 PM] [User name: CITY\NMoyerA] Log: Initializing form
+[8/10/2023 4:03:52 PM] [User name: CITY\NMoyerA] Log: Loading form and initializing variables
+[8/10/2023 4:03:52 PM] [User name: CITY\NMoyerA] Log: Killing main process
+[8/10/2023 4:03:52 PM] [User name: CITY\NMoyerA] Log: Main process succesfully stopped
+[8/10/2023 4:03:52 PM] [User name: CITY\NMoyerA] Log: Downloading installer
+[8/10/2023 4:03:56 PM] [User name: CITY\NMoyerA] Log: Installing MSI file
+[8/10/2023 4:04:02 PM] [User name: CITY\NMoyerA] Log: Deleting temp files
+[8/10/2023 4:04:02 PM] [User name: CITY\NMoyerA] Log: Update installed successfully

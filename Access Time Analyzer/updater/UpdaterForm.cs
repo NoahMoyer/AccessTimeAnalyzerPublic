@@ -6,16 +6,19 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Policy;
+using System.Net.Http;
+using System.IO.Pipes;
 
 namespace updater
 {
     /// <summary>
     /// This class runs an exe that is designed to download an Microsoft installer (msi file type) and install it silently.
     /// Currently this class is set up to download and install the newest version of the Access Time Anaylyzer from the following github link:
-    /// https://github.com/NoahMoyer/AccessTimeAnalyzer/releases/latest/download/App.Access.time.analyzer.installer.msi
+    /// https://github.com/NoahMoyer/AccessTimeAnalyzerPublic/releases/latest/download/App.Access.time.analyzer.installer.msi
     /// 
     /// Visit the following link to learn more about this program:
-    /// https://github.com/NoahMoyer/AccessTimeAnalyzer
+    /// https://github.com/NoahMoyer/AccessTimeAnalyzerPublic
     /// 
     /// The following pre conditions are expcted:
     /// - Program is being run on a 64 bit windows machine
@@ -104,7 +107,7 @@ namespace updater
                 string installerPath = @"C:\programdata\Access time analyzer\";
                 DirectoryInfo installerDirectory = Directory.CreateDirectory(installerPath);
                 string installerName = "Access.time.analyzer.installer.msi";
-                string msiDownloadLink = "https://github.com/NoahMoyer/AccessTimeAnalyzer/releases/latest/download/App.Access.time.analyzer.installer.msi";
+                string msiDownloadLink = "https://github.com/NoahMoyer/AccessTimeAnalyzerPublic/releases/latest/download/App.Access.time.analyzer.installer.msi";
                 okButton.Text = "OK";
                 okButton.Visible = false;
                 releaseNotesLink.Visible = false;
@@ -150,7 +153,7 @@ namespace updater
 
                     progressBar.Value = 25;
                     //launch download process
-                    Task download = Task.Run(() => downloadFiles(installerPath, installerName, msiDownloadLink));
+                    Task download = Task.Run(() => downloadFiles(msiDownloadLink, installerPath, installerName));
                     download.Wait();
                     progressBar.Value = 50;
                 }
@@ -227,23 +230,53 @@ namespace updater
         }
 
         /// <summary>
-        /// Function to download the installer file from github to a path passed into the function as a string.
+        /// Functions to download the installer file from github to a path passed into the function as a string.
+        /// Funciton downloadFiles, GetFileStream, and SaveStream are required to download the file.
         /// </summary>
         /// <param name="installerPath"></param>
         /// <param name="installerName"></param>
-        void downloadFiles(string installerPath, string installerName, string msiDownloadLink)
+        async Task downloadFiles(string sourceFile, string destinationFolder, string destinationFileName)
         {
-            using (WebClient wc = new WebClient())
+            Stream fileStream = await GetFileStream(sourceFile);
+
+            if (fileStream != Stream.Null)
             {
-                wc.DownloadProgressChanged += wc_DownloadProgressChanged;
-                wc.DownloadFile(
-                    // Param1 = Link of file
-                    new System.Uri(msiDownloadLink),
-                    // Param2 = Path to save
-                    installerPath + installerName
-                );
+                await SaveStream(fileStream, destinationFolder, destinationFileName);
             }
         }
+
+        async Task<Stream> GetFileStream(string fileUrl)
+        {
+            HttpClient httpClient = new HttpClient();
+            try
+            {
+                Stream fileStream = await httpClient.GetStreamAsync(fileUrl);
+                return fileStream;
+            }
+            catch (Exception ex)
+            {
+                log("Unhandeled exception occured. Cath error:\n " + ex);
+                return Stream.Null;
+            }
+        }
+
+        async Task SaveStream(Stream fileStream, string destinationFolder, string destinationFileName)
+        {
+            if (!Directory.Exists(destinationFolder))
+                Directory.CreateDirectory(destinationFolder);
+
+            string path = Path.Combine(destinationFolder, destinationFileName);
+
+            using (FileStream outputFileStream = new FileStream(path, FileMode.CreateNew))
+            {
+                await fileStream.CopyToAsync(outputFileStream);
+            }
+        }
+        /// End of download file functions.
+        ///
+        ///
+
+
 
         /// <summary>
         /// Function to launch an installer based on a path passed into the function.

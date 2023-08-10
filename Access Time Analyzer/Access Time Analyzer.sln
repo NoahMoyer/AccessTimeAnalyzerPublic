@@ -7,9 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Access Time Analyzer", "Acc
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Access Time Analyzer installer", "App Access time analyzer installer\App Access time analyzer installer.vdproj", "{785BCC87-0F75-4275-939F-47836817A427}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Access time analyzer unit tests", "Access time analyzer unit tests\Access time analyzer unit tests.csproj", "{6D018079-A1FA-4B92-A1C6-09F4FDF8159B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "updater", "updater\updater.csproj", "{5417496F-EBF8-481B-8367-FE932D90E3FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "updater", "updater\updater.csproj", "{5417496F-EBF8-481B-8367-FE932D90E3FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{E7ACB404-19B5-4CE8-BB0F-38FF6E163A3E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{785BCC87-0F75-4275-939F-47836817A427}.Debug|Any CPU.ActiveCfg = Debug
 		{785BCC87-0F75-4275-939F-47836817A427}.Release|Any CPU.ActiveCfg = Release
-		{6D018079-A1FA-4B92-A1C6-09F4FDF8159B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D018079-A1FA-4B92-A1C6-09F4FDF8159B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D018079-A1FA-4B92-A1C6-09F4FDF8159B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D018079-A1FA-4B92-A1C6-09F4FDF8159B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5417496F-EBF8-481B-8367-FE932D90E3FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5417496F-EBF8-481B-8367-FE932D90E3FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5417496F-EBF8-481B-8367-FE932D90E3FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
