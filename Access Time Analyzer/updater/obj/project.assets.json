@@ -30,9 +30,7 @@
           "System.Threading.Tasks": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.5/System.IO.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard1.5/System.IO.dll": {}
         }
       },
       "System.IO.FileSystem/4.3.0": {
@@ -48,9 +46,7 @@
           "System.Threading.Tasks": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/System.IO.FileSystem.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard1.3/System.IO.FileSystem.dll": {}
         }
       },
       "System.IO.FileSystem.Primitives/4.3.0": {
@@ -59,9 +55,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/System.IO.FileSystem.Primitives.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
@@ -74,9 +68,7 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         },
         "compile": {
-          "ref/netstandard1.5/System.Runtime.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
       "System.Runtime.Handles/4.3.0": {
@@ -87,9 +79,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/System.Runtime.Handles.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard1.3/System.Runtime.Handles.dll": {}
         }
       },
       "System.Text.Encoding/4.3.0": {
@@ -100,9 +90,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/System.Text.Encoding.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard1.3/System.Text.Encoding.dll": {}
         }
       },
       "System.Threading.Tasks/4.3.0": {
@@ -113,9 +101,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/System.Threading.Tasks.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       }
     }
@@ -582,26 +568,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nmoyera\\.nuget\\packages\\": {}
+    "C:\\Users\\Noah\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nmoyer\\source\\repos\\Profile Cleaner\\AccessTimeAnalyzerPublic\\Access Time Analyzer\\updater\\updater.csproj",
+      "projectUniqueName": "C:\\Users\\Noah\\source\\repos\\AccessTimeAnalyzerPublic\\Access Time Analyzer\\updater\\updater.csproj",
       "projectName": "updater",
-      "projectPath": "C:\\Users\\nmoyer\\source\\repos\\Profile Cleaner\\AccessTimeAnalyzerPublic\\Access Time Analyzer\\updater\\updater.csproj",
-      "packagesPath": "C:\\Users\\nmoyera\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nmoyer\\source\\repos\\Profile Cleaner\\AccessTimeAnalyzerPublic\\Access Time Analyzer\\updater\\obj\\",
+      "projectPath": "C:\\Users\\Noah\\source\\repos\\AccessTimeAnalyzerPublic\\Access Time Analyzer\\updater\\updater.csproj",
+      "packagesPath": "C:\\Users\\Noah\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Noah\\source\\repos\\AccessTimeAnalyzerPublic\\Access Time Analyzer\\updater\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\nmoyera\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Noah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows"
+        "net6.0-windows7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
@@ -630,8 +624,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -643,7 +636,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
