@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e7acb404-19b5-4ce8-bb0f-38ff6e163a3e": {
+      "ProjectGuid": "e7acb404-19b5-4ce8-bb0f-38ff6e163a3e",
+      "DisplayName": "Access Time Analyzer",
+      "ColorIndex": 0
+    },
+    "5417496f-ebf8-481b-8367-fe932d90e3ff": {
+      "ProjectGuid": "5417496f-ebf8-481b-8367-fe932d90e3ff",
+      "DisplayName": "updater",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

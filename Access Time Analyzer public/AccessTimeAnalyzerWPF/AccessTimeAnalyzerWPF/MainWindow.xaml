@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AccessTimeAnalyzerWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="478" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <Label x:Name="TitleLabel" Content="Recent applications" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <DataGrid  Margin="0,36,0,104">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name"/>
+                <DataGridTextColumn Header="Location"/>
+                <DataGridTextColumn Header="Last Accessed"/>
+                <DataGridTextColumn Header="Prefetch Name"/>
+                <DataGridTextColumn Header="Run Counter"/>
+                <DataGridTextColumn Header="Last Run Time"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ProgressBar HorizontalAlignment="Left" Height="22" Margin="10,373,0,0" VerticalAlignment="Top" Width="127"/>
+        <Label x:Name="LoadingBarLabel" Content="Loading prefetch file..." HorizontalAlignment="Left" Margin="10,369,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="CurrentMachineLabel" Content="Current machine:" HorizontalAlignment="Left" Margin="10,395,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="155,377,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="ChangeButton" Content="Change" HorizontalAlignment="Left" Margin="155,401,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.028,0.089" Width="50"/>
+        <Button x:Name="ResetButton" Content="Reset" HorizontalAlignment="Left" Margin="227,401,0,0" VerticalAlignment="Top" Width="50"/>
 
     </Grid>
 </Window>
