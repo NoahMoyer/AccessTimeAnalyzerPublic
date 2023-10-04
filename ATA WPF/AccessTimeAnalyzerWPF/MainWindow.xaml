@@ -24,6 +24,14 @@
         <TextBox HorizontalAlignment="Left" Margin="155,377,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="ChangeButton" Content="Change" HorizontalAlignment="Left" Margin="155,401,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.028,0.089" Width="50" Click="ChangeButton_Click"/>
         <Button x:Name="ResetButton" Content="Reset" HorizontalAlignment="Left" Margin="227,401,0,0" VerticalAlignment="Top" Width="50"/>
+        <Label Content="Default app group" HorizontalAlignment="Left" Margin="312,364,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="DefaultAppGroupComboBox" HorizontalAlignment="Left" Height="17" Margin="308,395,0,0" VerticalAlignment="Top" Width="111"/>
+        <Button x:Name="GenerateReportButton" Content="Generate report" HorizontalAlignment="Left" Margin="308,417,0,0" VerticalAlignment="Top" Width="111"/>
+        <Button x:Name="RefreshGroupsButton" Content="Refresh Groups" HorizontalAlignment="Left" Margin="456,376,0,0" VerticalAlignment="Top" Width="111"/>
+        <Button x:Name="ChangeAppGroupsButton" Content="Change app groups" HorizontalAlignment="Left" Margin="456,404,0,0" VerticalAlignment="Top" Width="111"/>
+        <Label Content="SQL server" HorizontalAlignment="Left" Margin="605,368,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="SQLServerTextBox" HorizontalAlignment="Left" Margin="605,394,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="SetSQLServerButton" Content="Set SQL server" HorizontalAlignment="Left" Margin="605,417,0,0" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

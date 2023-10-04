@@ -37,15 +37,10 @@ namespace AccessTimeAnalyzerWPF
         public MainWindow()
         {
             InitializeComponent();
+            settingsManager.getSettings();
+            SQLServer = settingsManager.sqlServerName;
             sql.connectToSqlServer($"Data Source={SQLServer};Initial Catalog=AccessTime;Integrated Security=True;");
-            // if(sql.connectToSqlServer($"Data Source={SQLServer};Initial Catalog=AccessTime;Integrated Security=True;"))
-            //{
-            //    Debug.WriteLine("SQL: Success!");
-            //}
-            //else
-            //{
-            //    Debug.WriteLine("SQL: Failed to connect!");
-            //}
+            
         }
 
         private void ChangeButton_Click(object sender, RoutedEventArgs e)
